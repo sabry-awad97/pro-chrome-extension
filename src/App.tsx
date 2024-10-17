@@ -1,8 +1,15 @@
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
+import { Popup } from "@/pages/Popup";
+
 function App() {
   return (
-    <div className="App">
-      <h1>My Chrome Extension</h1>
-    </div>
+    <ThemeProvider defaultTheme="light" storageKey="extension-theme">
+      <div className="min-h-screen">
+        <Popup />
+        <Toaster />
+      </div>
+    </ThemeProvider>
   );
 }
 
